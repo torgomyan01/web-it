@@ -174,6 +174,13 @@ nav .dropdown-menu {
 .gradient-card:hover .gradient-card-running-line {
   animation-play-state: running !important;
 }
+.gradient-card-image {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 23px;
+  object-fit: cover;
+}
 .gradient-card-body {
   width: 100%;
   min-height: 100%;

@@ -20,6 +20,14 @@
     content: "\f390"
 }
 
+.fa-code:before {
+    content: "\f121"
+}
+
+.fa-share-nodes:before {
+    content: "\f1e0"
+}
+
 
 
 /*---------------------------------*/
