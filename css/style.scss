@@ -1,0 +1,66 @@
+@import "helper";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+nav{
+  width: 100%;
+  height: 6.125rem;
+  padding: 0 4.375rem;
+  @include flex('sb', 'c');
+  background: #F4F4F4;
+  .nav-logo{
+    width: 150px;
+  }
+  .nav-item{
+    color: #303030;
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    height: 100%;
+    border-bottom: 1px solid #0000;
+    transition: 0.3s;
+    @include flex('c', 'c');
+    background: linear-gradient(172deg, #0000, #0000, #0000, #0000, #0000);
+    &:hover{
+      background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 1px solid #C13584;
+    }
+  }
+  .dropdown-toggle{
+   outline: none !important;
+    border: 0 !important;
+  }
+  .dropdown-menu{
+    min-width: auto !important;
+  }
+}
