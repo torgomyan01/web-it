@@ -19,6 +19,7 @@ const costs = {
     borderColor: 'bc-',
     paddingY: 'py-',
     flexGap: 'gap-',
+    colPercent: 'colPercent-',
 }
 const allElem = document.querySelectorAll('*');
 const head = document.head;
@@ -72,6 +73,7 @@ const classTypes = [
     {minClass: costs.bgc, styleName: 'background-color'},
     {minClass: costs.bgBlur, styleName: 'backdrop-filter'},
     {minClass: costs.flexGap, styleName: 'gap'},
+    {minClass: costs.colPercent, styleName: 'width'},
 ]
 
 const oldClasses = [];
@@ -189,6 +191,8 @@ function printStyle(type, className, percent, checkInp, classCount) {
             return classCount;
         case costs.opacity:
             return +classCount / 10;
+        case costs.colPercent:
+            return `${classCount}%`;
         default:
             return `${percentOrRem}`;
     }
