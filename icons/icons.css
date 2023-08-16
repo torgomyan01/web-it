@@ -28,6 +28,30 @@
     content: "\f1e0"
 }
 
+.fa-arrow-right:before {
+    content: "\f061"
+}
+
+.fa-arrow-left:before {
+    content: "\f060"
+}
+
+.fa-square-facebook:before {
+    content: "\f082"
+}
+
+.fa-instagram:before {
+    content: "\f16d"
+}
+
+.fa-youtube:before {
+    content: "\f167"
+}
+
+.fa-pinterest:before {
+    content: "\f0d2"
+}
+
 
 
 /*---------------------------------*/

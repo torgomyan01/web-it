@@ -282,4 +282,23 @@ nav .dropdown-menu {
   background-size: 105%;
 }
 
+.note {
+  border-radius: 8px;
+  background: #E9E9E9;
+  padding: 5.64px 12.23px 8.33px 12px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  text-transform: uppercase;
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
+
+.feedback .gradient-card {
+  box-shadow: none;
+}
+
 /*# sourceMappingURL=style.css.map */
