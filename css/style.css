@@ -206,6 +206,9 @@ nav .dropdown-menu {
   color: #fff;
   text-shadow: 0 0 2px black;
   transform: translateX(111px);
+  background: linear-gradient(180deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
 }
 .gradient-card-title {
   color: #303030;
