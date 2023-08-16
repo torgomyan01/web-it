@@ -34,13 +34,14 @@ $navbarHeight: 6.125rem;
 
 nav{
   width: 100%;
-  height: $navbarHeight;
+  height: 6.125rem;
   padding: 0 4.375rem;
-  background: #F4F4F4;
+  background: #f4f4f4e3;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  backdrop-filter: blur(10px);
   .nav-logo{
     width: 150px;
   }
@@ -179,8 +180,12 @@ nav{
   box-shadow: 30px 74px 134px 0 rgba(0, 0, 0, 0.08);
   background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
   overflow: hidden;
+  background-size: 100%;
 
   &:hover{
+
+    background-size: 500%;
+
     .gradient-card-running-line{
       animation-play-state: running !important;
     }
@@ -192,6 +197,10 @@ nav{
     margin-bottom: 20px;
     border-radius: 23px;
     object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.3s;
   }
 
   &-body{
@@ -269,4 +278,17 @@ nav{
 }
 .border-right{
   border-right: 0.5px solid var(--color-split, rgba(0, 0, 0, 0.06)) !important;
+}
+
+.our-projects{
+  .gradient-card{
+    transition: 0.3s;
+    transform: scale(1);
+    &:hover{
+      transform: scale(1.02);
+      .gradient-card-image{
+        background-size: 105%;
+      }
+    }
+  }
 }

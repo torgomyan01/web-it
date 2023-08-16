@@ -3,6 +3,7 @@ const colors = {
     white: '#FFFFFF',
     black: '#303030',
     textGrey: '#AEB5BC',
+    purple: '#833AB4',
 }
 
 
