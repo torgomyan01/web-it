@@ -1,3 +1,9 @@
+const {
+    active
+} = {
+    active: 'active'
+}
+
 
 $('.gradient-card-running-line').each((index, elem) => {
     const gradientCardRunningLine = $(elem).text();
@@ -41,3 +47,14 @@ slider.slick({
         }
     ]
 });
+
+$('.mobile-menu-board').on('click', function (){
+    if($(this).hasClass(active)){
+        $(this).removeClass(active);
+        $('body').css('overflow', '')
+    } else {
+        $(this).addClass(active);
+        $('body').css('overflow', 'hidden')
+    }
+})
+
