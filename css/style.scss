@@ -65,12 +65,33 @@ nav{
       border-bottom: 1px solid #C13584;
     }
   }
-  .dropdown-toggle{
-   outline: none !important;
-    border: 0 !important;
-  }
-  .dropdown-menu{
-    min-width: auto !important;
+
+}
+
+.dropdown-toggle{
+  outline: none !important;
+  border: 0 !important;
+}
+
+.dropdown-menu{
+  min-width: auto !important;
+}
+
+.mobile-menu{
+  width: 100%;
+  height: calc(100vh - #{$navbarHeight});
+  position: fixed;
+  top: $navbarHeight;
+  left: 0;
+  background: #f4f4f4e3;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s;
+  &.active{
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -116,7 +137,6 @@ nav{
     }
   }
   &-subtitle{
-    width: 18.75rem;
     color: rgba(30, 30, 30, 0.72);
     font-size: 1.5rem;
     font-weight: 400;
@@ -400,4 +420,48 @@ nav{
   -webkit-transform: rotate(0);
   transform: rotate(0);
   top: 0;
+}
+
+.sales{
+  position: relative;
+}
+
+.sale-card{
+  width: 280px;
+  height: 400px;
+  border-radius: 35px;
+  background: var(--linear-pr-color, linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%));
+  box-shadow: 30px 74px 134px 0 rgba(0, 0, 0, 0.08);
+  position: absolute;
+  opacity: 0;
+  transform: translateY(0);
+  &.active{
+    animation: salesCard 2s linear;
+    animation-iteration-count: 2;
+  }
+
+  @media (max-width: 768px) {
+    width: 190px;
+    height: 300px;
+  }
+  img{
+    position: absolute;
+  }
+}
+
+
+@keyframes salesCard {
+  0%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+  90%{
+    opacity: 1;
+    transform: translateY(-400px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-400px);
+    left: -500px !important;
+  }
 }

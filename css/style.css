@@ -64,12 +64,32 @@ nav .nav-item:hover {
   -webkit-text-fill-color: transparent;
   border-bottom: 1px solid #C13584;
 }
-nav .dropdown-toggle {
+
+.dropdown-toggle {
   outline: none !important;
   border: 0 !important;
 }
-nav .dropdown-menu {
+
+.dropdown-menu {
   min-width: auto !important;
+}
+
+.mobile-menu {
+  width: 100%;
+  height: calc(100vh - 6.125rem);
+  position: fixed;
+  top: 6.125rem;
+  left: 0;
+  background: rgba(244, 244, 244, 0.8901960784);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.mobile-menu.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .def-image {
@@ -116,7 +136,6 @@ nav .dropdown-menu {
   animation: shapeWord 2s linear;
 }
 .header-subtitle {
-  width: 18.75rem;
   color: rgba(30, 30, 30, 0.72);
   font-size: 1.5rem;
   font-weight: 400;
@@ -399,6 +418,50 @@ nav .dropdown-menu {
   -webkit-transform: rotate(0);
   transform: rotate(0);
   top: 0;
+}
+
+.sales {
+  position: relative;
+}
+
+.sale-card {
+  width: 280px;
+  height: 400px;
+  border-radius: 35px;
+  background: var(--linear-pr-color, linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%));
+  box-shadow: 30px 74px 134px 0 rgba(0, 0, 0, 0.08);
+  position: absolute;
+  opacity: 0;
+  transform: translateY(0);
+}
+.sale-card.active {
+  animation: salesCard 2s linear;
+  animation-iteration-count: 2;
+}
+@media (max-width: 768px) {
+  .sale-card {
+    width: 190px;
+    height: 300px;
+  }
+}
+.sale-card img {
+  position: absolute;
+}
+
+@keyframes salesCard {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(-400px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-400px);
+    left: -500px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -56,9 +56,24 @@ $('.mobile-menu-board').on('click', function (){
     if($(this).hasClass(active)){
         $(this).removeClass(active);
         $('body').css('overflow', '')
+        $('.mobile-menu').removeClass(active);
     } else {
         $(this).addClass(active);
-        $('body').css('overflow', 'hidden')
+        $('body').css('overflow', 'hidden');
+        $('.mobile-menu').addClass(active);
     }
 })
 
+AOS.init();
+
+let salesSuccess = true;
+
+$(window).on('scroll', function (){
+    // sales
+
+
+    if($(window).scrollTop() >= ($('#sales').offset().top - 300) && salesSuccess){
+        salesSuccess = false;
+        $('.sale-card').addClass(active)
+    }
+})
