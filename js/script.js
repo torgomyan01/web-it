@@ -28,21 +28,25 @@ slider.slick({
     speed: 300,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 1025,
             settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 2,
+                slidesToScroll: 2,
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 769,
             settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: '20px',
             }
         }
     ]
