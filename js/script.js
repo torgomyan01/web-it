@@ -66,14 +66,100 @@ $('.mobile-menu-board').on('click', function (){
 
 AOS.init();
 
-let salesSuccess = true;
+const allSections = $('section');
+
+
+const sectionsInfo = [];
+
+allSections.each((index, elem) => {
+    sectionsInfo.push({
+        top: $(elem).offset().top,
+        text: $(elem).data('pandatext'),
+        success: true
+    })
+})
+
+
+const pandaBlock = $('.panda-anim');
+const pandaMessage = $('.panda-anim-message');
+
 
 $(window).on('scroll', function (){
-    // sales
 
 
-    if($(window).scrollTop() >= ($('#sales').offset().top - 300) && salesSuccess){
-        salesSuccess = false;
-        $('.sale-card').addClass(active)
-    }
+    sectionsInfo.forEach((item, index) => {
+
+        if($(window).scrollTop() >= item.top - 300 && item.success){
+            item.success = false;
+
+            const texts = item.text.split('/')
+            pandaBlock.addClass('start-speak')
+
+            startPrintText(texts)
+
+        }
+
+    })
+
 })
+
+
+let text = '';
+let arrIndex = 0;
+let symbolCount = 0;
+let interval;
+
+function startPrintText(texts){
+    clearInterval(interval)
+    arrIndex = 0;
+    symbolCount = 0;
+
+    text = texts[arrIndex];
+
+    interval = setInterval(() => {
+        if(symbolCount === text?.length - 1 && arrIndex < texts.length){
+            arrIndex++
+            text = texts[arrIndex];
+            symbolCount = 0;
+        }
+        symbolCount++
+        pandaMessage.text(text?.slice(0, symbolCount))
+    }, 90);
+
+    startSpeak(text, function (){
+        startSpeak(texts[arrIndex], function (){
+            console.log('end')
+        })
+    })
+
+}
+
+
+// function startWrite(){
+//     // startSpeak(text, () => startSpeak(text))
+//
+//     setInterval(() => {
+//         if(symbolCount === text.length - 1 && arrIndex < texts.length){
+//             arrIndex++
+//             text = texts[arrIndex];
+//             symbolCount = 0;
+//         }
+//         symbolCount++
+//         pandaMessage.text(text.slice(0, symbolCount))
+//     }, 80)
+// }
+
+
+
+
+function startSpeak(text, callBackEnd){
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en";
+    speech.rate = 0.7;
+    speech.pitch = 1;
+    speech.volume = 0.8;
+    window.speechSynthesis.speak(speech);
+
+    speech.onend = () => callBackEnd()
+}
+

@@ -448,3 +448,48 @@ nav{
 
   }
 }
+
+
+.panda-anim{
+  width: 200px;
+  height: 250px;
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 300px;
+  right: 50px;
+  z-index: 1000;
+
+  &.start-speak{
+    .panda-anim-message{
+      display: block;
+    }
+  }
+
+  &-message{
+    position: absolute;
+    bottom: 100%;
+    left: -113%;
+    background: #fff;
+    border-radius: 0 50px 0 50px;
+    width: 300px;
+    min-height: 200px;
+    box-shadow: 0 0 15px #d7d7d7;
+    padding: 50px 10px 20px 10px;
+    font-size: 14px;
+    display: none;
+    &:before{
+      content: "";
+      width: 70px;
+      height: 70px;
+      background: url(../images/panda-message.svg) no-repeat center;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
