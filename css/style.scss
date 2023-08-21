@@ -483,8 +483,24 @@ nav{
   z-index: 1000;
   transition: unset !important;
   cursor: grab;
-  //transition: 0.3s !important;
-  //transform: scale(1);
+
+  .fa-xmark{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .fa-up-right-and-down-left-from-center{
+    position: absolute;
+    top: -100px;
+    right: -50px;
+    font-size: 25px;
+    cursor: pointer;
+    transform: scale(3);
+    display: none;
+  }
 
   &.message-right{
     .panda-anim-message{
@@ -495,9 +511,16 @@ nav{
 
   &.close{
     transform: scale(0.2) !important;
-    right: 5px !important;
+    right: -22px !important;
+    left: unset !important;
     top: 81% !important;
     cursor: pointer !important;
+    .fa-up-right-and-down-left-from-center{
+      display: block;
+    }
+    .fa-xmark{
+      display: none;
+    }
   }
 
 

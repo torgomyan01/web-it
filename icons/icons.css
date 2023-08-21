@@ -51,6 +51,13 @@
 .fa-pinterest:before {
     content: "\f0d2"
 }
+.fa-xmark:before {
+    content: "\f00d"
+}
+
+.fa-up-right-and-down-left-from-center:before {
+    content: "\f424"
+}
 
 
 

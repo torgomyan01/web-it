@@ -479,15 +479,38 @@ nav .nav-item:hover {
   transition: unset !important;
   cursor: grab;
 }
+.panda-anim .fa-xmark {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+.panda-anim .fa-up-right-and-down-left-from-center {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  font-size: 25px;
+  cursor: pointer;
+  transform: scale(3);
+  display: none;
+}
 .panda-anim.message-right .panda-anim-message {
   left: 45%;
   border-radius: 50px 0 50px 0;
 }
 .panda-anim.close {
   transform: scale(0.2) !important;
-  right: 5px !important;
+  right: -22px !important;
+  left: unset !important;
   top: 81% !important;
   cursor: pointer !important;
+}
+.panda-anim.close .fa-up-right-and-down-left-from-center {
+  display: block;
+}
+.panda-anim.close .fa-xmark {
+  display: none;
 }
 @media (max-width: 768px) {
   .panda-anim {

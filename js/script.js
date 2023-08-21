@@ -89,7 +89,12 @@ allSections.each((index, elem) => {
 
 const pandaBlock = $('.panda-anim');
 const pandaMessage = $('.panda-anim-message-body');
-let textsArray = [];
+let textsArray = []
+let text = '';
+let arrIndex = 0;
+let symbolCount = 0;
+let interval = setInterval(() => 's', 90);
+
 
 $(window).on('scroll', function (){
 
@@ -117,10 +122,8 @@ $(window).on('scroll', function (){
 })
 
 
-let text = '';
-let arrIndex = 0;
-let symbolCount = 0;
-let interval;
+
+
 
 function startPrintText(texts){
     clearInterval(interval)
@@ -136,11 +139,11 @@ function startPrintText(texts){
             symbolCount = 0;
         }
 
-        // if(symbolCount === text?.length - 1 && arrIndex === texts.length - 1){
-        //     setTimeout(() => {
-        //         pandaBlock.removeClass('start-speak')
-        //     }, 2000)
-        // }
+        if(symbolCount === text?.length - 1 && arrIndex === texts.length - 1){
+            setTimeout(() => {
+                pandaBlock.removeClass('start-speak')
+            }, 3000)
+        }
 
         symbolCount++
         pandaMessage.text(text?.slice(0, symbolCount))
@@ -154,6 +157,16 @@ function startPrintText(texts){
 
 }
 
+$(window).on('load', function (){
+    setTimeout(() => {
+        pandaBlock.addClass('start-speak');
+        startPrintText(
+            [
+                'Hello, I\'m WebIQ panda, I will inform you about the site and our activities, you can be attentive, learn about our promotions and services, and if you don\'t want to see me, just remove it, I won\'t be offended'
+            ]
+        )
+    }, 2000)
+})
 
 // function startWrite(){
 //     // startSpeak(text, () => startSpeak(text))
@@ -211,10 +224,14 @@ pandaBlock.pep({
     }
 });
 
-pandaBlock.on('dblclick', function (){
-    if($(this).hasClass('close')){
-        $(this).removeClass('close')
+$('#close-panda').on('click', openClosePanda)
+
+$('#open-panda').on('click', openClosePanda)
+
+function openClosePanda(){
+    if(pandaBlock.hasClass('close')){
+        pandaBlock.removeClass('close')
     } else {
-        $(this).addClass('close')
+        pandaBlock.addClass('close')
     }
-})
+}
