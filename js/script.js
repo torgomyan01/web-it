@@ -210,3 +210,11 @@ pandaBlock.pep({
         }
     }
 });
+
+pandaBlock.on('dblclick', function (){
+    if($(this).hasClass('close')){
+        $(this).removeClass('close')
+    } else {
+        $(this).addClass('close')
+    }
+})

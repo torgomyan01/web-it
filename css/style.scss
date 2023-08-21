@@ -483,12 +483,23 @@ nav{
   z-index: 1000;
   transition: unset !important;
   cursor: grab;
+  //transition: 0.3s !important;
+  //transform: scale(1);
+
   &.message-right{
     .panda-anim-message{
       left: 45%;
       border-radius: 50px 0 50px 0;
     }
   }
+
+  &.close{
+    transform: scale(0.2) !important;
+    right: 5px !important;
+    top: 81% !important;
+    cursor: pointer !important;
+  }
+
 
   @media (max-width: 768px){
     width: 100px;

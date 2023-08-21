@@ -483,6 +483,12 @@ nav .nav-item:hover {
   left: 45%;
   border-radius: 50px 0 50px 0;
 }
+.panda-anim.close {
+  transform: scale(0.2) !important;
+  right: 5px !important;
+  top: 81% !important;
+  cursor: pointer !important;
+}
 @media (max-width: 768px) {
   .panda-anim {
     width: 100px;
