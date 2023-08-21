@@ -453,14 +453,18 @@ nav{
 .panda-anim{
   width: 200px;
   height: 250px;
-  position: fixed;
+  position: fixed !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   top: 300px;
   right: 50px;
   z-index: 1000;
-  transition: 0.3s;
+  transition: unset !important;
+  cursor: grab;
+  &:active{
+    cursor: grabbing;
+  }
 
   &.start-speak{
     .panda-anim-message{

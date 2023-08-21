@@ -169,3 +169,10 @@ function startSpeak(text, callBackEnd){
     speech.onend = () => callBackEnd()
 }
 
+
+$('.panda-anim').pep({
+    ignoreRightClick: true,
+    start: function (e){
+        console.log(e)
+    }
+});
