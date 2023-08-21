@@ -75,6 +75,7 @@ allSections.each((index, elem) => {
     sectionsInfo.push({
         top: $(elem).offset().top,
         text: $(elem).data('pandatext'),
+        pandaUrl: $(elem).data('pandaurl'),
         success: true
     })
 })
@@ -89,13 +90,18 @@ $(window).on('scroll', function (){
 
     sectionsInfo.forEach((item, index) => {
 
-        if($(window).scrollTop() >= item.top - 300 && item.success){
-            item.success = false;
+        if($(window).scrollTop() >= item.top - 300 ){
 
-            const texts = item.text.split('/')
-            pandaBlock.addClass('start-speak')
+            $('.panda-anim').css('background-image', `url(${item.pandaUrl})`)
 
-            startPrintText(texts)
+            if(item.success){
+                item.success = false;
+
+                const texts = item.text.split('/')
+                pandaBlock.addClass('start-speak')
+
+                startPrintText(texts)
+            }
 
         }
 
