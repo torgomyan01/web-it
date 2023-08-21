@@ -1,6 +1,27 @@
 @import "helper";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(172deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:linear-gradient(172deg, rgba(88, 81, 219, 0.97), #C13584 53.01%, #E1306C 78.13%, #FD1D1D 100%);
+}
+
 
 *{
   margin: 0;
@@ -451,8 +472,8 @@ nav{
 
 
 .panda-anim{
-  width: 200px;
-  height: 250px;
+  width: 180px;
+  height: 240px;
   position: fixed !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -462,6 +483,18 @@ nav{
   z-index: 1000;
   transition: unset !important;
   cursor: grab;
+  &.message-right{
+    .panda-anim-message{
+      left: 45%;
+      border-radius: 50px 0 50px 0;
+    }
+  }
+
+  @media (max-width: 768px){
+    width: 100px;
+    height: 165px;
+  }
+
   &:active{
     cursor: grabbing;
   }
@@ -475,15 +508,44 @@ nav{
   &-message{
     position: absolute;
     bottom: 100%;
-    left: -113%;
+    left: -120%;
     background: #fff;
     border-radius: 0 50px 0 50px;
     width: 300px;
-    min-height: 170px;
+    height: 170px;
     box-shadow: 0 0 15px #d7d7d7;
-    padding: 50px 10px 20px 10px;
+    padding: 50px 15px 30px 15px;
     font-size: 14px;
     display: none;
+    cursor: default !important;
+
+    @media (max-width: 768px){
+      border-radius: 0 20px 0 20px;
+      left: -150%;
+      width: 185px;
+      height: 100px;
+      padding: 20px 15px 20px 15px;
+    }
+
+    &-body{
+      overflow: auto;
+      font-size: 14px;
+      height: 100%;
+      @media (max-width: 768px){
+        font-size: 11px;
+      }
+      &::-webkit-scrollbar {
+        width: 2px;
+        height: 8px;
+        border-radius: 5px;
+      }
+      &:after{
+        content: " |";
+        transition: 0.3s;
+        opacity: 0;
+        animation: spaceKey 0.8s infinite;
+      }
+    }
     &:before{
       content: "";
       width: 70px;
@@ -495,14 +557,13 @@ nav{
       left: 50%;
       top: 0;
       transform: translate(-50%, -50%);
+      @media (max-width: 768px){
+        width: 30px;
+        height: 30px;
+      }
     }
 
-    &:after{
-      content: " |";
-      transition: 0.3s;
-      opacity: 0;
-      animation: spaceKey 0.8s infinite;
-    }
+
   }
 }
 
