@@ -115,6 +115,7 @@ nav .nav-item:hover {
 
 .def-image {
   width: 100%;
+  height: auto;
 }
 
 .btn-gradient {

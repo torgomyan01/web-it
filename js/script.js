@@ -197,12 +197,15 @@ function startSpeak(text, callBackEnd){
 }
 
 let animUpset;
+let oldImageUrl = '';
 
 pandaBlock.pep({
     ignoreRightClick: true,
     shouldEase: false,
     initiate: function (e){
         clearInterval(interval)
+
+        oldImageUrl = e.target.style.backgroundImage
         animUpset = setTimeout(() => {
             pandaBlock.css('background-image', `url(images/panda-6.png)`).addClass('start-speak');
             pandaMessage.text('Please let me go, I\'m upset')
@@ -212,10 +215,13 @@ pandaBlock.pep({
         clearTimeout(animUpset);
         startPrintText(textsArray)
         animUpset = undefined;
-        pandaBlock.css('background-image', `url(images/panda-3.png)`).addClass('start-speak');
+        pandaBlock.css('background-image', oldImageUrl).addClass('start-speak');
         pandaMessage.text('')
     },
     drag: function (e){
+        clearTimeout(animUpset);
+        startPrintText(textsArray)
+        animUpset = undefined;
         if(e.pep.x < 350){
             pandaBlock.addClass('message-right')
         } else {
