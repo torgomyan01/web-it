@@ -95,8 +95,13 @@ let arrIndex = 0;
 let symbolCount = 0;
 let interval = setInterval(() => 's', 90);
 
+const fontSizeHeaderFaq = 1;
+
 
 $(window).on('scroll', function (){
+
+
+    $('.header-faq-title').css('transform', `scale(${fontSizeHeaderFaq - ($(window).scrollTop() / 350) })`)
 
 
     sectionsInfo.forEach((item, index) => {
