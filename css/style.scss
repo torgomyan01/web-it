@@ -151,11 +151,39 @@ nav{
       width: 100%;
     }
     .shape{
+      display: inline-block;
+      width: 18.75rem;
+      height: 8.5rem;
+      background-image: url("../images/shape.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
       position: relative;
       transform-origin: bottom;
       transform: translate(0, 0) rotate(0) scaleY(1);
       animation: shapeWord 2s linear;
-      //animation-iteration-count: infinite;
+      text-align: center;
+      padding-top: 13px;
+      &-text{
+
+        /* Create the gradient. */
+
+        /* Set the background size and repeat properties. */
+        background-size: 100%;
+        background-repeat: repeat;
+
+        /* Use the text as a mask for the background. */
+        /* This will show the gradient as a text color rather than element bg. */
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(180deg, rgba(88, 81, 219, 0.97) 0%, rgba(131, 58, 180, 0.92) 23.08%, #C13584 53.01%, #E1306C 78.13%);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 4px transparent;
+        transform: rotate(359deg);
+        position: relative;
+        display: inline-block;
+        padding-right: 5px;
+      }
+
     }
   }
   &-subtitle{
@@ -951,4 +979,9 @@ nav{
 
 .hover-bgc-pink:hover {
   background-color: #C13584;
+}
+
+.contacts{
+  margin-top: 12.5rem;
+  margin-bottom: 12.5rem;
 }

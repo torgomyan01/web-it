@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#00CF91">
+  <meta name="msapplication-navbutton-color" content="#00CF91">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00CF91">
+
+  <!--  SUPPORT FAVICON ALL TOUCH-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="android-chrome-192x192.png">
+  <meta name="msapplication-config" content="browserconfig.xml"/>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.pep.js"></script>
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="icons/icons.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link href="css/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Contacts</title>
+</head>
+<body>
+
+
+<nav>
+  <div class="container d-flex justify-content-between align-items-center h-100">
+    <a href="/" class="me-3">
+      <img src="images/logo-site.svg" alt="Logo site" class="nav-logo" width="947" height="240">
+    </a>
+
+    <div class="justify-content-center align-items-center gap-32 h-100 d-none d-lg-flex">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="index.html#services" class="nav-item">Services</a>
+      <a href="index.html#technology" class="nav-item">Technologies</a>
+      <a href="#" class="nav-item">Careers </a>
+      <a href="#" class="nav-item">Contacts</a>
+    </div>
+
+    <div class="mobile-menu-board">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+    <div class="dropdown d-none d-lg-block">
+      <button class="btn dropdown-toggle pe-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="images/usa.svg" alt="flag-change-page-language" width="32" height="22">
+      </button>
+      <ul class="dropdown-menu text-center">
+        <li>
+          <a class="dropdown-item" href="#">
+            <img width="32" height="22" src="images/usa.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img height="22" width="32" src="images/ru.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img width="32" height="22" src="images/am.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+    <a href="index.html" class="w-100 fs-25 c-black border-bottom d-block text-center py-3">Home</a>
+    <a href="index.html#services" class="w-100 fs-25 c-black border-bottom d-block text-center py-3">Services</a>
+    <a href="index.html#technology" class="w-100 fs-25 c-black border-bottom d-block text-center py-3">Technologies</a>
+    <a href="#" class="w-100 fs-25 c-black border-bottom d-block text-center py-3">Careers </a>
+    <a href="#" class="w-100 fs-25 c-black border-bottom d-block text-center py-3">Contacts</a>
+
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="images/usa.svg" alt="flag-change-page-language">
+      </button>
+      <ul class="dropdown-menu text-center">
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="images/usa.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="images/ru.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="images/am.svg" alt="flag-change-page-language">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="overflow-hidden">
+
+
+  <div class="container contacts">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-6 shadow p-0 rounded-2 overflow-hidden order-2 order-lg-1 mt-5 mt-lg-0">
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=683&amp;height=600&amp;hl=en&amp;q=Nikoghayos%20Adonts%20Street,%204/3,%20245,%20Yerevan%200021%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      </div>
+      <div class="col-12 col-lg-5 order-1 order-lg-2">
+        <h1>
+          Leave your contact and we will contact you
+        </h1>
+        <form class="mt-4">
+          <div class="mb-3">
+            <label for="Your-Name" class="form-label">Your Name</label>
+            <input type="email" class="form-control" id="Your-Name">
+          </div>
+          <div class="mb-3">
+            <label for="Email-address" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="Email-address">
+          </div>
+          <div class="mb-3">
+            <label for="Phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="Phone">
+          </div>
+          <div class="text-center mt-3">
+            <button type="submit" class="btn btn-gradient py-2">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-100 bgc-black d-flex justify-content-center align-items-center minh-94">
+    <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row h-100">
+      <a href="/" class="mt-4 mt-md-0 mb-4 mb-md-0">
+        <img height="240" src="images/logo-site-white.svg" alt="logo site" width="150" style="height: auto">
+      </a>
+      <p class="fs-21 fw-bold ls-1 c-white mb-4 mb-md-0 text-center text-md-start">
+        Copyright © 2023 WebIQ. All rights reserved.
+      </p>
+
+      <div class="d-flex justify-content-end align-items-center mb-4 mb-md-0">
+        <a href="#" class="fs-2 c-textGrey me-3">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="#" class="fs-2 c-textGrey me-3">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="fs-2 c-textGrey me-3">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="#" class="fs-2 c-textGrey me-3">
+          <i class="fa-brands fa-pinterest"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
