@@ -166,11 +166,11 @@ $(window).on('load', function (){
 
 
 let animUpset = true;
-
+//
 pandaBlock.pep({
     ignoreRightClick: true,
     shouldEase: false,
-    initiate: function (e){
+    initiate: function (){
         clearInterval(interval)
         animUpset = true;
         setTimeout(() => {
@@ -180,7 +180,7 @@ pandaBlock.pep({
             }
         }, 2000)
     },
-    stop: function (e){
+    stop: function (){
         animUpset = false;
         startPrintText(textsArray);
         pandaBlock.css('background-image', 'url(images/panda-3.png)').addClass('start-speak');
@@ -188,10 +188,11 @@ pandaBlock.pep({
     },
     drag: function (e){
         startPrintText(textsArray)
+        // console.log(e.pep.x, e.pep.y, $(window).width())
         if(e.pep.x <  wWidth()){
-            pandaBlock.addClass('message-right');
+            pandaBlock.addClass('message-right').addClass('close');
         } else {
-            pandaBlock.removeClass('message-right');
+            pandaBlock.removeClass('message-right').removeClass('close');
         }
     }
 });
@@ -204,17 +205,14 @@ function wWidth(){
     }
 }
 
-// document.getElementById('close-panda').addEventListener('click', openClosePanda)
-//
 $('#close-panda').on('click', openClosePanda)
 
 $('#open-panda').on('click', openClosePanda)
 
 function openClosePanda(){
-    console.log('ddd')
     if(pandaBlock.hasClass('close')){
         pandaBlock.removeClass('close')
     } else {
-        pandaBlock.addClass('close')
+        pandaBlock.addClass('close').removeClass('message-right')
     }
 }
