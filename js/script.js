@@ -197,7 +197,6 @@ function startSpeak(text, callBackEnd){
 }
 
 let animUpset = true;
-let oldImageUrl = '';
 
 pandaBlock.pep({
     ignoreRightClick: true,
@@ -236,6 +235,8 @@ function wWidth(){
     }
 }
 
+// document.getElementById('close-panda').addEventListener('click', openClosePanda)
+//
 $('#close-panda').on('click', openClosePanda)
 
 $('#open-panda').on('click', openClosePanda)

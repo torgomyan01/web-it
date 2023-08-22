@@ -481,11 +481,17 @@ nav .nav-item:hover {
   cursor: grab;
 }
 .panda-anim .fa-xmark {
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 0;
   font-size: 25px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 .panda-anim .fa-up-right-and-down-left-from-center {
   position: absolute;
@@ -502,10 +508,7 @@ nav .nav-item:hover {
 }
 .panda-anim.message-right .fa-xmark {
   left: 0;
-  top: -25px;
   right: unset;
-  position: relative;
-  z-index: 10;
 }
 .panda-anim.close {
   transform: scale(0.2) !important;
