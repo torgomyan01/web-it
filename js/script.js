@@ -149,11 +149,6 @@ function startPrintText(texts){
         pandaMessage.text(text?.slice(0, symbolCount))
     }, 90);
 
-    startSpeak(text, function (){
-        startSpeak(texts[arrIndex], function (){
-            console.log('end')
-        })
-    })
 
 }
 
@@ -168,33 +163,7 @@ $(window).on('load', function (){
     }, 2000)
 })
 
-// function startWrite(){
-//     // startSpeak(text, () => startSpeak(text))
-//
-//     setInterval(() => {
-//         if(symbolCount === text.length - 1 && arrIndex < texts.length){
-//             arrIndex++
-//             text = texts[arrIndex];
-//             symbolCount = 0;
-//         }
-//         symbolCount++
-//         pandaMessage.text(text.slice(0, symbolCount))
-//     }, 80)
-// }
 
-
-
-
-function startSpeak(text, callBackEnd){
-    let speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en";
-    speech.rate = 0.7;
-    speech.pitch = 1;
-    speech.volume = 0.8;
-    window.speechSynthesis.speak(speech);
-
-    speech.onend = () => callBackEnd()
-}
 
 let animUpset = true;
 
