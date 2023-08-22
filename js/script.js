@@ -196,7 +196,7 @@ function startSpeak(text, callBackEnd){
     speech.onend = () => callBackEnd()
 }
 
-let animUpset;
+let animUpset = true;
 let oldImageUrl = '';
 
 pandaBlock.pep({
@@ -204,37 +204,44 @@ pandaBlock.pep({
     shouldEase: false,
     initiate: function (e){
         clearInterval(interval)
-
-        oldImageUrl = e.target.style.backgroundImage
-        animUpset = setTimeout(() => {
-            pandaBlock.css('background-image', `url(images/panda-6.png)`).addClass('start-speak');
-            pandaMessage.text('Please let me go, I\'m upset')
+        animUpset = true;
+        setTimeout(() => {
+            if(animUpset){
+                pandaBlock.css('background-image', `url(images/panda-6.png)`).addClass('start-speak');
+                pandaMessage.text('Please let me go, I\'m upset');
+            }
         }, 2000)
     },
     stop: function (e){
-        clearTimeout(animUpset);
-        startPrintText(textsArray)
-        animUpset = undefined;
-        pandaBlock.css('background-image', oldImageUrl).addClass('start-speak');
-        pandaMessage.text('')
+        animUpset = false;
+        startPrintText(textsArray);
+        pandaBlock.css('background-image', 'url(images/panda-3.png)').addClass('start-speak');
+        pandaMessage.text('');
     },
     drag: function (e){
-        clearTimeout(animUpset);
         startPrintText(textsArray)
-        animUpset = undefined;
-        if(e.pep.x < 350){
-            pandaBlock.addClass('message-right')
+        if(e.pep.x <  wWidth()){
+            pandaBlock.addClass('message-right');
         } else {
-            pandaBlock.removeClass('message-right')
+            pandaBlock.removeClass('message-right');
         }
     }
 });
+
+function wWidth(){
+    if($(window).width() < 768){
+        return 200
+    } else {
+        return 350
+    }
+}
 
 $('#close-panda').on('click', openClosePanda)
 
 $('#open-panda').on('click', openClosePanda)
 
 function openClosePanda(){
+    console.log('ddd')
     if(pandaBlock.hasClass('close')){
         pandaBlock.removeClass('close')
     } else {

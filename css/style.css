@@ -500,6 +500,13 @@ nav .nav-item:hover {
   left: 45%;
   border-radius: 50px 0 50px 0;
 }
+.panda-anim.message-right .fa-xmark {
+  left: 0;
+  top: -25px;
+  right: unset;
+  position: relative;
+  z-index: 10;
+}
 .panda-anim.close {
   transform: scale(0.2) !important;
   right: -22px !important;
@@ -595,6 +602,339 @@ nav .nav-item:hover {
   50% {
     opacity: 1;
   }
+}
+.h-100 {
+  height: 6.25rem;
+}
+
+.gap-32 {
+  gap: 2rem;
+}
+
+.pe-0 {
+  padding-right: 0;
+}
+
+.w-100 {
+  width: 6.25rem;
+}
+
+.fs-25 {
+  font-size: 1.5625rem;
+}
+
+.c-black {
+  color: #303030;
+}
+
+.mt-50 {
+  margin-top: 3.125rem;
+}
+
+.pt-50 {
+  padding-top: 3.125rem;
+}
+
+.pb-50 {
+  padding-bottom: 3.125rem;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.minh-109 {
+  min-height: 6.8125rem;
+}
+
+.br-8 {
+  border-radius: 0.5rem;
+}
+
+.ps-20 {
+  padding-left: 1.25rem;
+}
+
+.fs-20 {
+  font-size: 1.25rem;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.pt-70 {
+  padding-top: 4.375rem;
+}
+
+.pb-70 {
+  padding-bottom: 4.375rem;
+}
+
+.mb-42 {
+  margin-bottom: 2.625rem;
+}
+
+.lh-31 {
+  line-height: 1.9375rem;
+}
+
+.w-40 {
+  width: 2.5rem;
+}
+
+.h-25 {
+  height: 1.5625rem;
+}
+
+.mh-25 {
+  max-height: 1.5625rem;
+}
+
+.br-20 {
+  border-radius: 1.25rem;
+}
+
+.bgc-purple {
+  background-color: #833AB4;
+}
+
+.fs-14 {
+  font-size: 0.875rem;
+}
+
+.mb-18 {
+  margin-bottom: 1.125rem;
+}
+
+.c-white {
+  color: #FFFFFF;
+}
+
+.mt-80 {
+  margin-top: 5rem;
+}
+
+.mt-30 {
+  margin-top: 1.875rem;
+}
+
+.me-20 {
+  margin-right: 1.25rem;
+}
+
+.mt-18 {
+  margin-top: 1.125rem;
+}
+
+.mt-100 {
+  margin-top: 6.25rem;
+}
+
+.mt-32 {
+  margin-top: 2rem;
+}
+
+.pt-60 {
+  padding-top: 3.75rem;
+}
+
+.pb-60 {
+  padding-bottom: 3.75rem;
+}
+
+.fs-40 {
+  font-size: 2.5rem;
+}
+
+.mw-980 {
+  max-width: 61.25rem;
+}
+
+.mt-72 {
+  margin-top: 4.5rem;
+}
+
+.pt-83 {
+  padding-top: 5.1875rem;
+}
+
+.fs-64 {
+  font-size: 4rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.lh-37 {
+  line-height: 2.3125rem;
+}
+
+.mt-36 {
+  margin-top: 2.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-15 {
+  margin-top: 0.9375rem;
+}
+
+.bgc-pink {
+  background-color: #C13584;
+}
+
+.h-40 {
+  height: 2.5rem;
+}
+
+.fs-24 {
+  font-size: 1.5rem;
+}
+
+.lh-36 {
+  line-height: 2.25rem;
+}
+
+.mt-68 {
+  margin-top: 4.25rem;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+
+.lh-28 {
+  line-height: 1.75rem;
+}
+
+.ms-12 {
+  margin-left: 0.75rem;
+}
+
+.fs-50 {
+  font-size: 3.125rem;
+}
+
+.fs-23 {
+  font-size: 1.4375rem;
+}
+
+.bgc-black {
+  background-color: #303030;
+}
+
+.minh-94 {
+  min-height: 5.875rem;
+}
+
+.fs-21 {
+  font-size: 1.3125rem;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.c-textGrey {
+  color: #AEB5BC;
+}
+
+@media (min-width: 768px) {
+  .colPercent-md-45 {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) {
+  .colPercent-md-55 {
+    width: 55%;
+  }
+}
+@media (min-width: 768px) {
+  .mt-md-0 {
+    margin-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .mb-lg-0 {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .h-lg-90 {
+    height: 5.625rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .pt-lg-0 {
+    padding-top: 0;
+  }
+}
+@media (min-width: 576px) {
+  .me-sm-3 {
+    margin-right: 0.1875rem;
+  }
+}
+@media (min-width: 992px) {
+  .me-lg-0 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .pe-md-100 {
+    padding-right: 6.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .mt-md-86 {
+    margin-top: 5.375rem;
+  }
+}
+@media (min-width: 768px) {
+  .pt-md-100 {
+    padding-top: 6.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .pb-md-100 {
+    padding-bottom: 6.25rem;
+  }
+}
+@media (min-width: 576px) {
+  .fs-sm-60 {
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .fs-md-80 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .fs-lg-100 {
+    font-size: 6.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .mb-md-0 {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .fs-md-60 {
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .fs-md-30 {
+    font-size: 1.875rem;
+  }
+}
+.hover-bgc-pink:hover {
+  background-color: #C13584;
 }
 
 /*# sourceMappingURL=style.css.map */
