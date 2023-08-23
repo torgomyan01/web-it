@@ -8,8 +8,19 @@ const {
 $('.gradient-card-running-line').each((index, elem) => {
     const gradientCardRunningLine = $(elem).text();
 
-    $(elem).css('width', `${gradientCardRunningLine.length * 50}px`);
-    $(elem).css('animation', `gradient-card-line 40s linear`);
+    $(elem).text('');
+
+    for (let i = 0; i < gradientCardRunningLine.length - 1; i++) {
+        $(elem).append(`<span>${gradientCardRunningLine[i]}</span>`)
+    }
+
+    const thisChild = $(elem).children('span');
+
+    let count = 0;
+    thisChild.each((index, elemSpan) => count += $(elemSpan).width())
+
+    $(elem).css('width', `${count}px`);
+    $(elem).css('animation', `gradient-card-line ${count / 80}s linear`);
     $(elem).css('animation-iteration-count', `infinite`);
     $(elem).css('animation-play-state', `paused`);
 
